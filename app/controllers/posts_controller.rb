@@ -12,16 +12,16 @@ class PostsController < ApplicationController
   end
 
   # Create action saves the post into database
-  def create
-    @post = Post.new
-    if @post.save(post_params)
-      flash[:notice] = "Successfully created post!"
-      redirect_to post_path(@post)
-    else
-      flash[:alert] = "Error creating new post!"
-      render :new
-    end
-  end
+def create
+@post = Post.new(post_params)
+if @post.save
+flash[:notice] = "Successfully created post!"
+redirect_to post_path(@post)
+else
+flash[:alert] = "Error creating new post!"
+render :new
+end
+end
 
   # Edit action retrives the post and renders the edit page
   def edit
