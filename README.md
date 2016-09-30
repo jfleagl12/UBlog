@@ -1,2 +1,2 @@
 # UBlog
-Testing building rails blog
+Testing building a rails blog.
